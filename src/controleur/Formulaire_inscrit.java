@@ -41,20 +41,20 @@ public class Formulaire_inscrit extends HttpServlet {
 		
 		
 		// récupérations des paramètres.
-		String nom = request.getParameter("nom");
-		String prenom = request.getParameter("prenom");
-		String email = request.getParameter("email");
-		String dateNaissance = request.getParameter("dateNaissance");	
-		String telephone = request.getParameter("telephone");
-		String sexe = (request.getParameter("radio_sexe").equals("sexeM") == true) ? "Homme" : "Femme";
-		String mdp = request.getParameter("mdp");
-		String pays = request.getParameter("pays");
-		String langages[] = request.getParameterValues("langages");
-		String langagesString = "";
+		String nom 				= request.getParameter("nom");
+		String prenom 			= request.getParameter("prenom");
+		String email 			= request.getParameter("email");
+		String dateNaissance 	= request.getParameter("dateNaissance");	
+		String telephone 		= request.getParameter("telephone");
+		String sexe 			=(request.getParameter("radio_sexe").equals("sexeM") == true) ? "Homme" : "Femme";
+		String mdp 				= request.getParameter("mdp");
+		String pays 			= request.getParameter("pays");
+		String langages[] 		= request.getParameterValues("langages");
+		String langagesString 	= "";
 		for (String l : langages) {
 			langagesString += l +", ";
 		}
-		langagesString = langagesString.substring(0, langagesString.length()-2);
+		langagesString 			= langagesString.substring(0, langagesString.length()-2);
 		
 		
 		
@@ -64,15 +64,15 @@ public class Formulaire_inscrit extends HttpServlet {
 		
 		
 		// mise en place des attributs pour la vue.
-		request.setAttribute("nom", nom);
-		request.setAttribute("prenom", prenom);
-		request.setAttribute("email", email);
-		request.setAttribute("dateNaissance", dateNaissance);
-		request.setAttribute("telephone", telephone);
-		request.setAttribute("sexe", sexe);
-		request.setAttribute("mdp", mdp);
-		request.setAttribute("pays", pays);
-		request.setAttribute("langages", langagesString);
+		request.setAttribute("nom", 			nom);
+		request.setAttribute("prenom", 			prenom);
+		request.setAttribute("email", 			email);
+		request.setAttribute("dateNaissance", 	dateNaissance);
+		request.setAttribute("telephone", 		telephone);
+		request.setAttribute("sexe", 			sexe);
+		request.setAttribute("mdp", 			mdp);
+		request.setAttribute("pays", 			pays);
+		request.setAttribute("langages", 		langagesString);
 		
 		this.getServletContext().getRequestDispatcher("/WEB-INF/views/affichInscrit.jsp").forward(request, response);
 		

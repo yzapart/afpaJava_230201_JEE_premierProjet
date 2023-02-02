@@ -7,145 +7,71 @@
 </head>
 <body>
 
-<div class="container">
-        <div class="formulaire">
-            <form action="Formulaire_inscrit" method="post">
-                <div class="ligne">
-                    <span>Nom</span>
-                    <span><input type="text" name="nom"></span>
-                </div>
-                <div class="ligne">
-                    <span>Prenom</span>
-                    <span><input type="text" name="prenom"></span>
-                </div>
-                <div class="ligne">
-                <span>Email</span>
-                <span><input type="text" name="email"></span>
-            </div>
-            <div class="ligne">
-                <span>Date de naissance</span>
-                <span><input type="date" name="dateNaissance"></span>
-            </div>
-            <div class="ligne">
-                <span>Téléphone</span>
-                <span><input type="text" name="telephone"></span>
-            </div>
-            <div class="ligne">
-                <span>Sexe</span>
-                <span>
-                    <input type="radio" name="radio_sexe" value="sexeM"> M
-                    <input type="radio" name="radio_sexe" value="sexeF"> F
-                </span>
-            </div>
-            <div class="ligne">
-                <span>Mot de passe</span>
-                <span><input type="text" name="mdp"></span>
-            </div>
-            <div class="ligne">
-                <span>Confirmation mot de passe</span>
-                <span><input type="text" name="mdpCheck"></span>
-            </div>
-            <div class="ligne">
-                <span>Pays</span>
-                <span>
-                    <select name="pays" id="liste_pays">
-                        <option value="France">France</option>
-                        <option value="Maroc">Maroc</option>
-                        <option value="Belgique">Belgique</option>
-                    </select>
-                </span>
-            </div>
-            <div class="ligne">
-                <span>Langages préférés</span>
-                <div id="checkbox_langages">
-                    <span>
-                        <input type="checkbox" name="langages" value="Python" id="langage1">
-                        <label for="langage1">Python</label>
-                    </span>
-                    <span>
-                        <input type="checkbox" name="langages" value="Java" id="langage2">
-                        <label for="langage2">Java</label>
-                    </span>
-                    <span>
-                        <input type="checkbox" name="langages" value="SQL" id="langage3">
-                        <label for="langage3">SQL</label>
-                    </span>
-                </div>
-            </div>
-            <div class="send">
-                <input type="submit" value="Envoyer">
-            </div>
-        </form>
-        </div>
-    </div>
+	<div class="container">
+		<div class="formulaire">
+			<form action="AjoutClient" method="post">
+				<div class="ligne">
+					<span>Nom</span> 
+					<span><input type="text" name="nom"></span>
+				</div>
+				<div class="ligne">
+					<span>Prenom</span> 
+					<span><input type="text" name="prenom"></span>
+				</div>
+				<div class="ligne">
+					<span>Email</span> <span><input type="text" name="email"></span>
+				</div>
+				<div class="ligne">
+					<span>Date de naissance</span> <span><input type="date"
+						name="dateNaissance"></span>
+				</div>
+				<div class="ligne">
+					<span>Téléphone</span> <span><input type="text"
+						name="telephone"></span>
+				</div>
+				<div class="ligne">
+					<span>Sexe</span> <span> 
+						<input type="radio"	name="sexe" value="Homme"> M 
+						<input type="radio"	name="sexe" value="Femme"> F
+					</span>
+				</div>
+				<div class="ligne">
+					<span>Mot de passe</span> <span><input type="text"
+						name="mdp"></span>
+				</div>
+				<div class="ligne">
+					<span>Confirmation mot de passe</span> <span><input
+						type="text" name="mdpCheck"></span>
+				</div>
+
+				<div class="ligne">
+					<span>Pays</span> <span> <select name="pays" id="liste_pays">
+							<option value="France">France</option>
+							<option value="Maroc">Maroc</option>
+							<option value="Belgique">Belgique</option>
+					</select>
+					</span>
+				</div>
+				<div class="ligne">
+					<span>Langages préférés</span>
+					<div id="checkbox_langages">
+						<span> <input type="checkbox" name="langages"
+							value="Python" id="langage1"> <label for="langage1">Python</label>
+						</span> <span> <input type="checkbox" name="langages" value="Java"
+							id="langage2"> <label for="langage2">Java</label>
+						</span> <span> <input type="checkbox" name="langages" value="SQL"
+							id="langage3"> <label for="langage3">SQL</label>
+						</span>
+					</div>
+				</div>
+				<div class="send">
+					<input type="hidden" name ="etape" value="verificationMdp">
+					<input type="submit" value="Envoyer">
+				</div>
+			</form>
+		</div>
+	</div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- 	<form action="PrintNomPrenom" method="post">
-		<input type="text" name="nom">
-		<input type="text" name="prenom">
-		<input type="submit" value="Submit">
-	</form>
-	
-	<br><br> -->
-	
-<!-- 	<form action="Operation" method="post">
-		<input type="text" name="a">
-		<input type="text" name="b"> 
-		
-		
-		<select name="ope">
-			<option value="addition">+</option>
-			<option value="soustraction">-</option>
-			<option value="multiplication">*</option>
-			<option value="division">/</option>
-		</select> 
-		<input type="submit" value="Submit">
-	</form>
-	 -->
-	
-	
-	
-	
-	
-	
 </body>
 </html>

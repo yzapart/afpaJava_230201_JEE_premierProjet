@@ -51,17 +51,17 @@
     </div>
 
  
-    <form action="EnregistrementCSV" method="post">
+    <form action="AjoutClient" method="post">
     
-		<input type="hidden" name="nom" value="<% out.print(request.getAttribute("nom"));%>">
-		<input type="hidden" name="prenom" value="<% out.print(request.getAttribute("prenom"));%>">
-		<input type="hidden" name="email" value="<% out.print(request.getAttribute("email"));%>">
-		<input type="hidden" name="dateNaissance" value="<% out.print(request.getAttribute("dateNaissance"));%>">
-		<input type="hidden" name="telephone" value="<% out.print(request.getAttribute("telephone"));%>">
-		<input type="hidden" name="sexe" value="<% out.print(request.getAttribute("sexe"));%>">
-		<input type="hidden" name="mdp" value="<% out.print(request.getAttribute("mdp"));%>">
-		<input type="hidden" name="pays" value="<% out.print(request.getAttribute("pays"));%>">
-		<input type="hidden" name="langages" value="<% out.print(request.getAttribute("langages"));%>">
+		<input type="hidden" name="nom" 			value="<% out.print(request.getAttribute("nom"));%>">
+		<input type="hidden" name="prenom" 			value="<% out.print(request.getAttribute("prenom"));%>">
+		<input type="hidden" name="email" 			value="<% out.print(request.getAttribute("email"));%>">
+		<input type="hidden" name="dateNaissance" 	value="<% out.print(request.getAttribute("dateNaissance"));%>">
+		<input type="hidden" name="telephone" 		value="<% out.print(request.getAttribute("telephone"));%>">
+		<input type="hidden" name="sexe" 			value="<% out.print(request.getAttribute("sexe"));%>">
+		<input type="hidden" name="mdp" 			value="<% out.print(request.getAttribute("mdp"));%>">
+		<input type="hidden" name="pays" 			value="<% out.print(request.getAttribute("pays"));%>">
+		<input type="hidden" name="langages" 		value="<% out.print(request.getAttribute("langages"));%>">
     	<input type="submit" value="Enregistrer">
     </form>
 
