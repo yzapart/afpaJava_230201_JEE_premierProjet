@@ -4,17 +4,22 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.util.ArrayList;
+
+import org.apache.catalina.realm.NestedCredentialHandler;
 
 import model.Client;
 
 public class ClientDao {
 
 	public void addClient(Client client) {
-
+		
+		ArrayList<Client> listeClients = (getListeClients() == null) ? new ArrayList<Client>() : getListeClients(); 
+		listeClients.add(client);	
 		try {
-			FileOutputStream fs = new FileOutputStream("C:\\Users\\59013-42-16\\Desktop\\client.txt");
+			FileOutputStream fs = new FileOutputStream("C:\\Users\\59013-42-16\\Desktop\\listeClients.txt");
 			ObjectOutputStream os = new ObjectOutputStream(fs);
-			os.writeObject(client);
+			os.writeObject(listeClients);
 			os.close();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -32,5 +37,20 @@ public class ClientDao {
 		}
 		return null;
 	}
+	
 
+	
+	
+	
+	public ArrayList<Client> getListeClients() {
+		try {
+			FileInputStream fis = new FileInputStream("C:\\Users\\59013-42-16\\Desktop\\listeClients.txt");
+			ObjectInputStream ois = new ObjectInputStream(fis);
+			ArrayList<Client> liste = (ArrayList<Client>) ois.readObject();
+			return liste;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
 }
