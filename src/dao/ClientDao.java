@@ -47,6 +47,7 @@ public class ClientDao {
 			FileInputStream fis = new FileInputStream("C:\\Users\\59013-42-16\\Desktop\\listeClients.txt");
 			ObjectInputStream ois = new ObjectInputStream(fis);
 			ArrayList<Client> liste = (ArrayList<Client>) ois.readObject();
+			ois.close();
 			return liste;
 		} catch (Exception e) {
 			e.printStackTrace();
