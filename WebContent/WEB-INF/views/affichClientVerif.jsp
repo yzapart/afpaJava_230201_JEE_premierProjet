@@ -12,11 +12,7 @@
 </head>
 <body>
 
-<%-- <%out.print(request.getServletContext().getAttribute("x")); %> --%>
-
-		<%
-			Client c = (Client)request.getAttribute("client");
-		%>
+<% Client c = (Client) request.getServletContext().getAttribute("clientSession"); %>
 
 		
 	<div class="container">
@@ -61,15 +57,6 @@
     </div>
     
     <form action="AjoutClient" method="post">
-    	<input type="hidden" name="nom" value ="<% out.print(c.getNom()); %>" >
-	    <input type="hidden" name="prenom" value ="<% out.print(c.getPrenom()); %>" >
-	    <input type="hidden" name="email" value ="<% out.print(c.getEmail()); %>" >
-	    <input type="hidden" name="dateNaissance" value ="<% out.print(c.getDateNaissance()); %>" >
-	    <input type="hidden" name="telephone" value ="<% out.print(c.getTelephone()); %>" >
-	    <input type="hidden" name="sexe" value ="<% out.print(c.getSexe()); %>" >
-	    <input type="hidden" name="mdp" value ="<% out.print(c.getMdp()); %>" >
-	    <input type="hidden" name="pays" value ="<% out.print(c.getPays()); %>" >
-	    <input type="hidden" name="langages" value ="<% out.print(c.getLangages()); %>" >
 		<input type="hidden" name="etape" value="enregistrementClient">
 		<input type="submit" value="Enregistrer">
 	</form>

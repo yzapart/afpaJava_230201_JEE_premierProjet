@@ -11,11 +11,8 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<%-- <%out.print(request.getServletContext().getAttribute("x")); %> --%>
 
-		<%
-			Client c = (Client)request.getAttribute("client");
-		%>
+	<% Client c = (Client) request.getServletContext().getAttribute("clientSession"); %>
 
 	<h1>Client enregistré : </h1>	
 	
